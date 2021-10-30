@@ -8,10 +8,10 @@ const Slider = () => {
 const [slideIndex, setSlideIndex] = useState(0)
 const handleClick = (direction) => {
     if(direction === "left"){
-        setSlideIndex(slideIndex > 0 ? slideIndex-1 : 2)
+        setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 2 )
     }
     else{
-        setSlideIndex(slideIndex < 2 ? slideIndex+1 : 0)
+        setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0 )
     }
 }
 
@@ -22,7 +22,7 @@ const handleClick = (direction) => {
       </Arrow>
       <Wraper slideIndex={slideIndex}>
           {sliderItems.map((item) =>(
-        <SlideContainer bgcolor={item.bgcolor}>
+        <SlideContainer bgcolor={item.bgcolor} key={item.id}>
           <ImgContainer >
             <Image
               src={item.img}
@@ -77,8 +77,8 @@ const Arrow = styled.div`
 const Wraper = styled.div`
   height: 100%;
   display : flex;
-  position : relative
-  transform : translateX(${props => props.slideIndex * -100}vw)
+  transition : all 1.5s ease;
+  transform : translateX(${props => props.slideIndex * -100 }vw)
 `;
 const SlideContainer = styled.div`
   width: 100vw;
@@ -117,26 +117,3 @@ background-color : transparent;
 cursor : pointer;
 `;
 
-// const HeroBanner = styled.div`
-// width: 100%;
-// height : 100vh;
-// display: flex;
-// background-color: orange;
-// position: relative;
-// `
-// const Arrow = styled.div `
-// width : 50px;
-// height : 50px;
-// background-color : #757575;
-// border-radius : 50%;
-// display: flex;
-// align-items: center;
-// justify-content : center;
-// color : white;
-// position: absolute;
-// top: 0;
-// bottom: 0;
-// margin: auto;
-// left: ${props => props.direction === 'left' && '10px'};
-// right: ${props => props.direction === 'right' && '10px'};
-// `
