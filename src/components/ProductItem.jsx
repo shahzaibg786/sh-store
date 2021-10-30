@@ -6,7 +6,7 @@ import { FavoriteBorder, Search } from "@mui/icons-material";
 const ProductItem = ({item}) => {
     return (
         <Container>
-            <Circle />
+            {/* <Circle /> */}
             <Image src={item.img}/>
             <Info>
                 <Icon>
@@ -25,6 +25,22 @@ const ProductItem = ({item}) => {
 
 export default ProductItem
 
+const Info = styled.div`
+opacity : 0;
+background-color : rgba(0,0,0,0.2);
+position : absolute;
+top : 0;
+left: 0;
+width : 100%;
+height : 100%;
+display : flex;
+// flex-direction : column;
+justify-content : center;
+align-items : center;
+z-index :3;
+transition : all 0.5s ease;
+`
+
 
 const Container = styled.div`
 flex : 1;
@@ -34,25 +50,45 @@ height : 350px;
 display : flex;
 align-items : center;
 justify-content : center;
-background-color : gray;
-position : relative;`
+background-color : #f0f0f0;
+position : relative;
 
-const Circle = styled.div``
+&:hover ${Info} {
+    opacity : 1;
+}
 
-const Info = styled.div`
-position : absolute;
-top : 0;
-left: 0;
-width : 100%;
-height : 100%;
-display : flex;
-flex-direction : column;
-justify-content : center;
-align-items : center;
 `
 
-const Icon = styled.div``
+const Circle = styled.div`
+height: 200px;
+width: 200px;
+border-radius: 50%;
+background-color : white;
+position: absolute;
+`
+
 const Image = styled.img`
+width : 250px;
 height : 75%;
-object-fit: cover;
+z-index :2;
+`
+
+
+
+const Icon = styled.div`
+width: 40px;
+height: 40px;
+border-radius: 50%;
+background-color : white;
+display: flex;
+justify-content : center;
+align-items : center;
+margin : 5px;
+cursor : pointer;
+transition : all 0.5s ease;
+
+&:hover {
+    background-color : #e9f5f5;
+    transform : scale(1.5);
+}
 `

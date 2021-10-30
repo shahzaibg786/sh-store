@@ -1,7 +1,9 @@
+import bed1 from "./images/bed1.jpg"
+
 export const sliderItems = [
   {
     id: 1,
-    img: "https://pixabay.com/get/gd7b71f960f94f3a91003dd4425fd6bbc077691f128d9e2fe0da60f09173a160ed4a8b98b3bf3003bc55fe535d912a93c_640.jpg",
+    img: {bed1},
     title: "Summer Collection",
     desc:
       "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
@@ -75,6 +77,26 @@ export const ProductItems = [
     },
     {
         id:6,
+        img: "https://pixabay.com/get/g7c9e30c2b0ebde79d07b8c1644cdccb77bb4deaca31bfdbadd743507090f5cb11079177e2ebc91a0a14a6b35daeb1053479733592a5de223b84c6a7054b2ed01_640.jpg",
+        bgcolor: "#9f7549",
+    },
+    {
+        id:7,
+        img: "https://pixabay.com/get/g7c9e30c2b0ebde79d07b8c1644cdccb77bb4deaca31bfdbadd743507090f5cb11079177e2ebc91a0a14a6b35daeb1053479733592a5de223b84c6a7054b2ed01_640.jpg",
+        bgcolor: "#9f7549",
+    },
+    {
+        id:8,
+        img: "https://pixabay.com/get/g7c9e30c2b0ebde79d07b8c1644cdccb77bb4deaca31bfdbadd743507090f5cb11079177e2ebc91a0a14a6b35daeb1053479733592a5de223b84c6a7054b2ed01_640.jpg",
+        bgcolor: "#9f7549",
+    },
+    {
+        id:9,
+        img: "https://pixabay.com/get/g7c9e30c2b0ebde79d07b8c1644cdccb77bb4deaca31bfdbadd743507090f5cb11079177e2ebc91a0a14a6b35daeb1053479733592a5de223b84c6a7054b2ed01_640.jpg",
+        bgcolor: "#9f7549",
+    },
+    {
+        id:10,
         img: "https://pixabay.com/get/g7c9e30c2b0ebde79d07b8c1644cdccb77bb4deaca31bfdbadd743507090f5cb11079177e2ebc91a0a14a6b35daeb1053479733592a5de223b84c6a7054b2ed01_640.jpg",
         bgcolor: "#9f7549",
     },
