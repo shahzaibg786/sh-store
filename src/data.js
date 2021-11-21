@@ -11,7 +11,7 @@ export const sliderItems = [
   },
   {
     id: 2,
-    img: "https://pixabay.com/get/g519b3ad8272d1e092bc70bdbb21c7f8994693bda2a0a128e316f09a49cebda95efbc9d1e9373e3f975f4f95245f10ec698d39538da9c5e4d46099f47e7d25502_640.jpg",
+    img: "https://pixabay.com/get/g6e5cfff0b57e5991a39cbe111aed9ab1c93f18b5ecb059831302596403e3e960fd42bdfb553fd88d2a8c199814e8793e_640.jpg",
     title: "Winter Collection",
     desc: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
     bgcolor: "#9f7549",

@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { mobile } from '../components/Responsive'
 import bed1 from '../images/bed1.jpg'
 const Login = () => {
     return (
@@ -11,7 +12,13 @@ const Login = () => {
                     <Input placeholder = "Password" />
                 
                 <Button>Next</Button>
+                <Link >Forgot Password Click Here</Link>
+                <Link >Create New Account.</Link>
                 </Form>
+                {/* <Forgot>
+                    <Forgottitle>Forgot Password</Forgottitle>
+                    <Forgotbutton>Click Here</Forgotbutton>
+                </Forgot> */}
             </Wrapper>
         </Container>
     )
@@ -32,11 +39,12 @@ justify-content : center;
 `
 
 const Wrapper = styled.div`
-width: 40%;
+width: 25%;
 background-color : white;
 padding : 20px;
 align-items : center;
 justify-content : center;
+${mobile({width: "75%"})}
 `
 
 const Title = styled.h1`
@@ -59,12 +67,12 @@ margin: 20px 0px;
 const Input = styled.input`
 flex: 1;
 padding : 10px;
-margin : 20px 20px 0px 0px;`
+margin : 10px 0px;`
 
 const Button = styled.button`
 width : 40%;
 padding : 15px 20px;
-margin : 20px 0px;
+margin : 10px 0px;
 border : none;
 border-radius : 10px;
 background-color: #a0c794;
@@ -76,3 +84,20 @@ cursor : pointer;
     background-color : orange;
 }
 `
+const Link = styled.a `
+margin : 3px 0px;
+display : flex;
+cursor : pointer;
+ &:hover{
+     color : orange;
+     text-decoration : underline;
+ }`
+
+// const Forgot = styled.div`
+// display : flex;
+// `
+
+// const Forgottitle = styled.h4``
+// const Forgotbutton = styled.a`
+// margin-left : 10px;
+// color : red;`

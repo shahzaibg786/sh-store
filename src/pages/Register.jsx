@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { mobile } from "../components/Responsive";
 import bed4 from "../images/bed4.jpg"
 
 const Register = () => {
@@ -47,6 +48,7 @@ background-color: #f5f5f5;
 width : 40%;
 align-items: center;
 justify-content: center;
+${mobile({width:"80%"})}
 `;
 
 const Title = styled.h1`
@@ -89,4 +91,5 @@ cursor : pointer;
 &:hover{
     background-color : orange;
 }
+${mobile({width:"40%"})}
 `;

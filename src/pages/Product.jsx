@@ -5,6 +5,7 @@ import Announcement from '../components/Announcement'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import Newsletter from '../components/Newsletter'
+import { mobile } from '../components/Responsive'
 import bed1 from '../images/bed1.jpg'
 
 
@@ -78,6 +79,7 @@ const Container = styled.div``
 const Wrapper = styled.div`
 padding : 50px;
 display : flex;
+${mobile({padding:"10px" , flexDirection:"column"})}
 `
 
 const ImageContainer = styled.div`
@@ -88,11 +90,13 @@ const Image =styled.img`
 width : 100%;
 height : 90vh;
 object-fit : cover;
+${mobile({height:"30vh"})}
 `
 
 const InfoContainer = styled.div`
 flex : 1;
 padding : 0px 50px;
+${mobile({padding:"10px"})}
 `
 
 const Title = styled.h1`
@@ -111,6 +115,7 @@ width: 50%;
 margin : 30px 0px;
 display : flex;
 justify-content : space-between;
+${mobile({width:"100%"})}
 `
 
 const Filter =styled.div`
@@ -147,13 +152,13 @@ width : 50%;
 display : flex;
 align-items : center;
 justify-content : space-between;
+${mobile({width: "100%"})}
 `
 
 const AmountContainer =styled.div`
 display : flex;
 align-items : center;
 font-weight : 700;
-
 `
 
 
@@ -170,7 +175,7 @@ margin : 0px 5px;
 
 
 const AddCartbtn =styled.button`
-padding: 15px;
+padding: 10px;
 border : 1px solid #a0c794;
 background-color: #a0c794;
 color: white;

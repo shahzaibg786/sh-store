@@ -3,6 +3,7 @@ import styled from "styled-components";
 import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
 import ArrowBackIosNewOutlinedIcon from "@mui/icons-material/ArrowBackIosNewOutlined";
 import {sliderItems} from "../data"
+import { mobile } from "./Responsive";
 
 const Slider = () => {
 const [slideIndex, setSlideIndex] = useState(0)
@@ -53,6 +54,7 @@ const Herobanner = styled.div`
   display: flex;
   position: relative;
   overflow : hidden;
+  ${mobile({display:"none"})}
 `;
 const Arrow = styled.div`
   height: 50px;

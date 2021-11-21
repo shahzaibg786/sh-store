@@ -1,6 +1,7 @@
 import { Facebook, Instagram, LinkedIn, MailOutline, Phone, Room } from '@mui/icons-material'
 import React from 'react'
 import styled from "styled-components"
+import {mobile} from './Responsive'
 
 const Footer = () => {
     return (
@@ -52,12 +53,17 @@ export default Footer
 
 const Container = styled.div`
 display : flex;
-background-color : rgba(0,0,0,0.2);`
+// background-color : rgba(0,0,0,0.2);
+${mobile({
+    flexDirection: "column"
+})}
+`
 const Left = styled.div`
 flex :1;
 display : flex;
 flex-direction: column;
 padding: 20px
+
 `
 
 const Logo = styled.h1``
@@ -75,6 +81,7 @@ align-items : center;
 justify-content : center;
 margin-right : 10px;
 background-color : #${props => props.color}
+
 `
 
 
@@ -82,6 +89,7 @@ background-color : #${props => props.color}
 const Center = styled.div`
 flex :1;
 padding : 20px;
+${mobile({display:"none"})}
 `
 const Title = styled.h3`
 margin-bottom: 20px;`
@@ -101,10 +109,14 @@ margin-bottom : 8px;
 const Right = styled.div`
 flex :1;
 padding : 20px;
+${mobile({backgroundColor:"rgba(0,0,0,0.2)"})}
 `
 const ContactItems = styled.div`
 margin-bottom : 8px;
 display: flex;
-align-items :center;`
+align-items :center;
+`
 
-const Payment = styled.img``
+const Payment = styled.img`
+
+`
